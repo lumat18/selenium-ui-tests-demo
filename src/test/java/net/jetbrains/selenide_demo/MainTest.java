@@ -7,6 +7,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -21,6 +22,12 @@ public class MainTest {
         Configuration.browserSize = "1280x800";
         Configuration.timeout = 8000;
         SelenideLogger.addListener("allure", new AllureSelenide());
+
+        // Selenoid
+//        Configuration.remote = "http://localhost:4444/wd/hub";
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("enableVNC", true);
+//        Configuration.browserCapabilities = capabilities;
     }
 
     @Feature("todo")
