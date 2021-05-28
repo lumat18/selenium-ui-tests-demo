@@ -20,6 +20,7 @@ public class MainTest {
         Configuration.browser = "firefox";
         Configuration.browserSize = "1280x800";
         Configuration.timeout = 8000;
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @Feature("todo")
